@@ -1,7 +1,17 @@
-var mainInterval = null;
+var mainInterval, lastId, mainMenu, mainMenuHeight, menuItems, scrollItems;
 
 $(document).ready(function() {
   console.log("ready");
+  mainMenu = $(".left-navigation");
+  mainMenuHeight = 15;
+  console.log(mainMenuHeight);
+  menuItems = mainMenu.find("a");
+  scrollItems = menuItems.map(function() {
+    var item = $($(this).attr("href"));
+    if (item.length) {
+      return item;
+    }
+  })
 
   $(".masonry").mouseenter(function() {
     $(this).children(".masonry-info").fadeTo('fast', 1);
@@ -67,6 +77,26 @@ function startRotate(index) {
 
     currentIndex++;
 
-    
+
   }, 5000);
 }
+
+$(window).scroll(function() {
+  var toTop = $(this).scrollTop() + mainMenuHeight;
+
+  var cur = scrollItems.map(function() {
+    if ($(this).offset().top < toTop) {
+      return this;
+    }
+  });
+
+  cur = cur[cur.length - 1];
+
+  var id = cur && cur.length ? cur[0].id : "";
+
+  if (lastId !== id) {
+    lastId = id;
+    menuItems.removeClass("active");
+    menuItems.filter("[href='#" + id + "']").addClass("active");
+  }
+})

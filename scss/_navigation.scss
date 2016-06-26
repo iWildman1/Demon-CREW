@@ -35,13 +35,20 @@
 
         &.active {
           color: $redMain;
+          text-decoration: none;
         }
-
-
 
         &:hover {
           text-decoration: none;
           color: $redMain;
+        }
+
+        &:active {
+          text-decoration: none;
+        }
+
+        &:focus {
+          text-decoration: none;
         }
       }
     }

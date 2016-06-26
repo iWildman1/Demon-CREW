@@ -117,10 +117,17 @@ button.btn-primary:focus, button.btn-primary:focus:focus {
 }
 .left-navigation ul li a.active {
   color: #c52526;
+  text-decoration: none;
 }
 .left-navigation ul li a:hover {
   text-decoration: none;
   color: #c52526;
+}
+.left-navigation ul li a:active {
+  text-decoration: none;
+}
+.left-navigation ul li a:focus {
+  text-decoration: none;
 }
 .left-navigation ul:after {
   content: "";
