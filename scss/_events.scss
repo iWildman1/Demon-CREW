@@ -1,0 +1,43 @@
+#events {
+  margin-top: 90px;
+  text-align: center;
+
+  .row {
+    margin-top: 40px;
+    text-align: left;
+  }
+
+  h1 {
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+
+  .event-grid {
+    margin-top: 40px;
+    img {
+      width: 100%;
+    }
+
+    p {
+      font-size: 16px;
+      opacity: 0.8;
+    }
+
+    h5 {
+      font-size: 28px;
+      font-weight: 300;
+    }
+
+    small {
+      color: $redMain;
+      line-height: 60px;
+      font-size: 14px;
+    }
+  }
+
+  button {
+    margin-top: 40px;
+  }
+}

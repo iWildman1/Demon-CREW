@@ -1,0 +1,444 @@
+/* ========== TYPOGRAPHY ==========*/
+/* ========== TYPOGRAPHY ==========*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
+@keyframes chevronAnim {
+  from {
+    opacity: 0;
+    bottom: 50px;
+  }
+
+  to {
+    opacity: 1;
+    bottom: 20px;
+  }
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  position: relative;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-light {
+  font-weight: 100;
+}
+
+.text-central {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* ========== POSITIONING ==========*/
+.main-body {
+  margin-left: 260px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1170px;
+}
+
+/* ========== BUTTON ==========*/
+button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 30px;
+}
+button.btn-secondary {
+  background-color: transparent;
+  border: 1px solid #36363e;
+  border-radius: 3px;
+}
+button.btn-primary, button.btn-primary:focus {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 8px 20px 8px 20px;
+  transition: 0.2s color ease-in-out;
+}
+button.btn-primary:hover, button.btn-primary:focus:hover {
+  background-color: white;
+  color: #36363e;
+  border: none;
+}
+button.btn-primary:focus, button.btn-primary:focus:focus {
+  outline: none;
+}
+
+.left-navigation {
+  background-color: white;
+  border-right: #eeeeee 1px solid;
+  width: 260px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  z-index: 9999;
+}
+.left-navigation img {
+  margin-top: 40px;
+  width: 160px;
+}
+.left-navigation ul {
+  position: relative;
+  margin-top: 25px;
+  margin-left: 45px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  list-style: none;
+  padding-left: 0;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.left-navigation ul li {
+  padding-top: 9px;
+  padding-bottom: 9px;
+  font-size: 14px;
+}
+.left-navigation ul li a {
+  color: #36363e;
+}
+.left-navigation ul li a.active {
+  color: #c52526;
+}
+.left-navigation ul li a:hover {
+  text-decoration: none;
+  color: #c52526;
+}
+.left-navigation ul:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 100%;
+  border-top: 1px #ececec solid;
+  border-bottom: 1px #ececec solid;
+  z-index: -20;
+}
+
+#header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(/img/header-bg.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+#header h1 {
+  margin-top: 0;
+  font-size: 90px;
+  color: white;
+}
+#header .header-text {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+#header i {
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  bottom: 20px;
+  -webkit-animation: chevronAnim 1.5s ease-out infinite;
+  animation: chevronAnim 1.5s ease-out infinite;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#about h4 {
+  text-align: center;
+  margin-top: 80px;
+  font-size: 33px;
+  line-height: 1.6;
+}
+#about .lead {
+  text-align: center;
+  margin-top: 40px;
+  line-height: 1.8;
+  font-size: 20px;
+}
+#about .meet-the-team {
+  margin-top: 80px;
+  text-align: center;
+  text-transform: uppercase;
+}
+#about .meet-the-team img {
+  width: 100%;
+}
+#about .meet-the-team h6 {
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-top: 20px;
+}
+#about .meet-the-team small {
+  letter-spacing: 1.5px;
+  font-size: 13px;
+}
+
+#work {
+  margin-top: 100px;
+  text-align: center;
+}
+#work .lead {
+  line-height: 1.8;
+}
+#work .masonry-container {
+  margin-top: 40px;
+  height: 500px;
+  position: relative;
+}
+#work .masonry-container .masonry {
+  display: inline-block;
+  position: absolute;
+  background-size: cover;
+  background-position: center center;
+  cursor: pointer;
+}
+#work .masonry-container .masonry .masonry-info {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+#work .masonry-container .masonry .masonry-info .masonry-text {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+}
+#work .masonry-container .masonry .masonry-info .masonry-text h5 {
+  font-weight: 400;
+  font-size: 22px;
+}
+#work .masonry-container .masonry .masonry-info .masonry-text small {
+  font-size: 16px;
+}
+#work .masonry-container .masonry.masonry-main {
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url(/img/masonry1.jpg);
+}
+#work .masonry-container .masonry.masonry-upper {
+  width: 25%;
+  height: 50%;
+  top: 0;
+  left: 50%;
+  background-image: url(/img/masonry2.jpg);
+}
+#work .masonry-container .masonry.masonry-upper-2 {
+  width: 25%;
+  height: 50%;
+  top: 0;
+  left: 75%;
+  background-image: url(/img/masonry3.jpg);
+}
+#work .masonry-container .masonry.masonry-lower {
+  width: 50%;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  background-image: url(/img/masonry4.jpg);
+}
+
+#events {
+  margin-top: 90px;
+  text-align: center;
+}
+#events .row {
+  margin-top: 40px;
+  text-align: left;
+}
+#events h1 {
+  text-align: center;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+#events .event-grid {
+  margin-top: 40px;
+}
+#events .event-grid img {
+  width: 100%;
+}
+#events .event-grid p {
+  font-size: 16px;
+  opacity: 0.8;
+}
+#events .event-grid h5 {
+  font-size: 28px;
+  font-weight: 300;
+}
+#events .event-grid small {
+  color: #c52526;
+  line-height: 60px;
+  font-size: 14px;
+}
+#events button {
+  margin-top: 40px;
+}
+
+#blog {
+  margin-top: 70px;
+  text-align: center;
+}
+#blog .blog-container {
+  width: 100%;
+  height: 400px;
+  background-image: url(/img/blog-bg.jpg);
+  background-position: center center;
+  text-align: center;
+  position: relative;
+  color: white;
+}
+#blog .blog-container .blog-info {
+  display: inline-block;
+  position: relative;
+  top: 200px;
+  transform: translateY(-50%);
+}
+#blog .blog-container .blog-info h3 {
+  font-weight: 300;
+  font-size: 32px;
+}
+#blog .blog-container .blog-info p {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.6;
+}
+#blog .blog-container .blog-info .rotator-box .rotator {
+  width: 10px;
+  height: 10px;
+  border: 1px solid white;
+  display: inline-block;
+  border-radius: 45px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+#blog .blog-container .blog-info .rotator-box .rotator-full {
+  background-color: white;
+}
+#blog .blog-container .btn-light {
+  border: 1px solid white;
+}
+#blog .blog-container .btn-light:hover {
+  color: white;
+}
+
+#contact {
+  margin-top: 60px;
+}
+#contact .button-container {
+  text-align: center;
+}
+#contact input {
+  width: 100%;
+  margin-top: 30px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+#contact input:focus {
+  outline: none;
+}
+#contact textarea {
+  resize: vertical;
+  width: 100%;
+  margin-top: 30px;
+  font-size: 22px;
+  letter-spacing: 1px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-left: 15px;
+}
+#contact textarea:focus {
+  outline: none;
+}
+
+#footer {
+  margin-top: 60px;
+  background-color: #52515a;
+  text-align: center;
+  color: white;
+  padding-top: 30px;
+}
+#footer h5 {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+#footer ul {
+  list-style: none;
+  padding: 0;
+}
+#footer ul li {
+  padding-top: 6px;
+}
+#footer ul a {
+  color: white;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+#footer ul a:hover {
+  text-decoration: none;
+}
+#footer input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  color: #36363e;
+}
+#footer .btn-light {
+  border: 1px solid white;
+}
+#footer .btn-light:hover {
+  color: white;
+}
+#footer p {
+  font-size: 17px;
+  letter-spacing: 0.5px;
+}
+#footer .lower-footer {
+  background-color: #36363e;
+  margin-top: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#footer .lower-footer p {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}

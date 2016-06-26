@@ -1,0 +1,80 @@
+#work {
+  margin-top: 100px;
+  text-align: center;
+
+  .lead {
+    line-height: 1.8;
+  }
+
+  .masonry-container {
+    margin-top: 40px;
+    height: 500px;
+    position: relative;
+
+    .masonry {
+      display: inline-block;
+      position: absolute;
+      background-size: cover;
+      background-position: center center;
+      cursor: pointer;
+
+      .masonry-info {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background-color: rgba(255, 255, 255, 0.7);
+
+        .masonry-text {
+          display: inline-block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-transform: uppercase;
+
+          h5 {
+            font-weight: 400;
+            font-size: 22px;
+          }
+
+          small {
+            font-size: 16px;
+          }
+        }
+      }
+
+      &.masonry-main {
+        width: 50%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-image: url(/img/masonry1.jpg);
+      }
+
+      &.masonry-upper {
+        width: 25%;
+        height: 50%;
+        top: 0;
+        left: 50%;
+        background-image: url(/img/masonry2.jpg);
+      }
+      &.masonry-upper-2 {
+        width: 25%;
+        height: 50%;
+        top: 0;
+        left: 75%;
+        background-image: url(/img/masonry3.jpg);
+      }
+      &.masonry-lower {
+        width: 50%;
+        height: 50%;
+        top:50%;
+        left:50%;
+        background-image: url(/img/masonry4.jpg);
+      }
+    }
+  }
+}

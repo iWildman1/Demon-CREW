@@ -1,0 +1,90 @@
+/* ========== TYPOGRAPHY ==========*/
+
+@keyframes chevronAnim {
+  from {
+    opacity: 0;
+    bottom: 50px;
+  }
+
+  to {
+    opacity: 1;
+    bottom: 20px;
+  }
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  position: relative;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-light {
+  font-weight: 100;
+}
+
+.text-central {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* ========== POSITIONING ==========*/
+
+.main-body {
+  margin-left: 260px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1170px;
+}
+
+/* ========== BUTTON ==========*/
+
+button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 30px;
+
+  &.btn-secondary {
+    background-color: transparent;
+    border: 1px solid $darkMain;
+    border-radius: 3px;
+  }
+
+  &.btn-primary, &.btn-primary:focus {
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 8px 20px 8px 20px;
+    transition: 0.2s color ease-in-out;
+
+    &:hover {
+      background-color: white;
+      color: $darkMain;
+      border: none;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
