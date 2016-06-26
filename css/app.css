@@ -321,6 +321,13 @@ button.btn-primary:focus, button.btn-primary:focus:focus {
   position: relative;
   color: white;
 }
+#blog .blog-container ul {
+  list-style: none;
+  padding-left: 0;
+}
+#blog .blog-container ul li {
+  display: none;
+}
 #blog .blog-container .blog-info {
   display: inline-block;
   position: relative;
@@ -344,6 +351,7 @@ button.btn-primary:focus, button.btn-primary:focus:focus {
   border-radius: 45px;
   margin-top: 10px;
   margin-left: 10px;
+  cursor: pointer;
 }
 #blog .blog-container .blog-info .rotator-box .rotator-full {
   background-color: white;
