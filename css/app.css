@@ -54,30 +54,32 @@ h1, h2, h3, h4 {
 }
 
 /* ========== BUTTON ==========*/
-button {
+a.btn-secondary {
+  background-color: transparent;
+  border: 1px solid #36363e;
+  border-radius: 3px;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: 30px;
 }
-button.btn-secondary {
-  background-color: transparent;
-  border: 1px solid #36363e;
-  border-radius: 3px;
-}
-button.btn-primary, button.btn-primary:focus {
+a.btn-primary, a.btn-primary:focus {
   background-color: transparent;
   border: 1px solid white;
   border-radius: 3px;
   padding: 8px 20px 8px 20px;
   transition: 0.2s color ease-in-out;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 30px;
 }
-button.btn-primary:hover, button.btn-primary:focus:hover {
+a.btn-primary:hover, a.btn-primary:focus:hover {
   background-color: white;
   color: #36363e;
-  border: none;
+  border: 1px solid white;
 }
-button.btn-primary:focus, button.btn-primary:focus:focus {
+a.btn-primary:focus, a.btn-primary:focus:focus {
   outline: none;
 }
 
