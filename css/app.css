@@ -62,6 +62,7 @@ a.btn-secondary {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: 30px;
+  color: white;
 }
 a.btn-primary, a.btn-primary:focus {
   background-color: transparent;
@@ -215,6 +216,9 @@ a.btn-primary:focus, a.btn-primary:focus:focus {
 #work .lead {
   line-height: 1.8;
 }
+#work a.btn {
+  color: #36363e;
+}
 #work .masonry-container {
   margin-top: 40px;
   height: 500px;
@@ -313,8 +317,9 @@ a.btn-primary:focus, a.btn-primary:focus:focus {
   line-height: 60px;
   font-size: 14px;
 }
-#events button {
+#events a.btn {
   margin-top: 40px;
+  color: #36363e;
 }
 
 #blog {
@@ -374,9 +379,10 @@ a.btn-primary:focus, a.btn-primary:focus:focus {
 
 #contact {
   margin-top: 60px;
-}
-#contact .button-container {
   text-align: center;
+}
+#contact a {
+  color: #36363e;
 }
 #contact input {
   width: 100%;

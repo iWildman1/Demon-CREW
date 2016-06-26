@@ -1,9 +1,11 @@
 #contact {
   margin-top: 60px;
 
-  .button-container {
-    text-align: center;
+  a {
+    color: $darkMain;
   }
+
+  text-align: center;
 
   input {
     width: 100%;

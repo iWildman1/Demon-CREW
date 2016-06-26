@@ -6,6 +6,12 @@
     line-height: 1.8;
   }
 
+  a {
+    &.btn {
+      color: $darkMain;
+    }
+  }
+
   .masonry-container {
     margin-top: 40px;
     height: 500px;

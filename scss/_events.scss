@@ -37,7 +37,11 @@
     }
   }
 
-  button {
-    margin-top: 40px;
+  a {
+
+    &.btn {
+      margin-top: 40px;
+      color: $darkMain;
+    }
   }
 }
