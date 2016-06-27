@@ -1,6 +1,7 @@
 /* ========== TYPOGRAPHY ==========*/
 /* ========== TYPOGRAPHY ==========*/
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
+@import url("https://fonts.googleapis.com/css?family=Crete+Round");
 @keyframes chevronAnim {
   from {
     opacity: 0;
@@ -342,6 +343,12 @@ a.btn-primary:focus, a.btn-primary:focus:focus {
 #blog .blog-container ul li {
   display: none;
 }
+#blog .blog-container ul li a {
+  color: white;
+}
+#blog .blog-container ul li a:hover {
+  text-decoration: none;
+}
 #blog .blog-container .blog-info {
   display: inline-block;
   position: relative;
@@ -464,4 +471,283 @@ a.btn-primary:focus, a.btn-primary:focus:focus {
 #footer .lower-footer p {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.5);
+}
+
+.list-header {
+  background-color: #f6f6f6;
+  height: 120px;
+  border-bottom: 1px solid #d0d0d0;
+}
+.list-header h3, .list-header small {
+  line-height: 120px;
+  margin: 0;
+  padding: 0;
+}
+.list-header h3 {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 28px;
+  letter-spacing: 1.6px;
+}
+.list-header small {
+  font-size: 14px;
+}
+
+.list-container {
+  margin-top: 60px;
+}
+.list-container .row:not(:first-child) {
+  margin-top: 60px;
+}
+.list-container img {
+  width: 100%;
+}
+.list-container h5 {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-top: 20px;
+}
+.list-container a {
+  color: #36363e;
+}
+.list-container a:hover {
+  text-decoration: none;
+}
+.list-container .readMore {
+  color: #c52526;
+}
+.list-container p {
+  font-size: 15px;
+}
+.list-container ul {
+  list-style: none;
+  padding-left: 0;
+}
+.list-container ul li {
+  display: inline-block;
+  font-family: 'Crete Round', serif;
+  font-style: italic;
+  padding-right: 10px;
+  opacity: 0.5;
+}
+.list-container ul li i {
+  padding-right: 5px;
+}
+.list-container ul li:first-child:after {
+  content: "/";
+  padding-left: 10px;
+}
+.list-container .pagination {
+  width: 100%;
+  margin-top: 50px;
+}
+.list-container .pagination a {
+  border: 1px solid #c52526;
+  padding: 10px 15px;
+  border-radius: 45px;
+  transition: 0.3s all ease-in-out;
+}
+.list-container .pagination a:hover {
+  text-decoration: none;
+  background-color: #c52526;
+  color: white;
+}
+
+.main-post {
+  margin-top: 60px;
+}
+.main-post h3 {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 32px;
+  letter-spacing: 1.6px;
+}
+.main-post ul {
+  list-style: none;
+  padding-left: 0;
+  font-family: 'Crete Round', serif;
+  font-style: italic;
+  opacity: 0.5;
+  font-size: 13px;
+  margin-top: 15px;
+}
+.main-post ul li {
+  display: inline-block;
+  padding-right: 10px;
+}
+.main-post ul li:after {
+  content: "/";
+  padding-left: 10px;
+}
+.main-post ul li:last-child:after {
+  display: none;
+}
+.main-post ul li i {
+  padding-right: 5px;
+}
+.main-post img {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.main-post .post-body p {
+  font-size: 17px;
+  line-height: 1.8;
+  margin-top: 25px;
+}
+.main-post .post-body blockquote {
+  font-family: 'Crete Round', serif;
+  font-style: italic;
+  line-height: 1.8;
+  font-size: 18px;
+}
+.main-post .share-icons {
+  height: 50px;
+  margin-top: 30px;
+}
+.main-post .share-icons ul, .main-post .share-icons p {
+  margin: 0;
+  padding: 0;
+  line-height: 50px;
+}
+.main-post .share-icons p {
+  font-weight: 400;
+  font-size: 17px;
+}
+.main-post .share-icons ul {
+  opacity: 1;
+  font-size: 18px;
+}
+.main-post .author-container {
+  margin-top: 50px;
+  width: 100%;
+  border: 1px solid #d0d0d0;
+  border-radius: 10px;
+}
+.main-post .author-container .author-name {
+  border: 1px solid #d0d0d0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-left: -1px;
+  margin-right: -1px;
+  margin-top: -1px;
+  background-color: #f7f7f7;
+  padding: 10px 15px;
+}
+.main-post .author-container .author-name h4 {
+  font-weight: 400;
+  font-size: 20px;
+}
+.main-post .author-container .author-name h4 strong {
+  font-weight: 400;
+  color: #c52526;
+}
+.main-post .author-container .col-md-2 {
+  position: relative;
+}
+.main-post .author-container img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  margin-left: 30px;
+}
+.main-post .author-container p {
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.main-post .comments-container {
+  margin-top: 70px;
+}
+.main-post .comments-container h5 {
+  font-weight: 400;
+  font-size: 26px;
+}
+.main-post .comments-container h5 strong {
+  font-weight: 400;
+  color: #c52526;
+}
+.main-post .comments-container .comment-box {
+  border: 1px solid #d0d0d0;
+  border-radius: 10px;
+  position: relative;
+  min-height: 150px;
+}
+.main-post .comments-container .comment-box .comment-info {
+  margin-left: 60px;
+  margin-top: 20px;
+}
+.main-post .comments-container .comment-box .comment-info h6 {
+  font-family: 'Crete Round';
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.main-post .comments-container .comment-box .comment-info small {
+  font-family: 'Crete Round', serif;
+  font-size: 14px;
+  opacity: 0.6;
+}
+.main-post .comments-container .comment-box .comment-info p {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.main-post .comments-container .comment-box .image-base {
+  width: 88px;
+  height: 88px;
+  border-radius: 100%;
+  background-color: white;
+  border: 1px solid #d0d0d0;
+  position: absolute;
+  top: 30px;
+  transform: translateX(-50%);
+}
+.main-post .comments-container .comment-box img {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  position: absolute;
+  margin: 0;
+  top: 39px;
+  transform: translateX(-50%);
+  z-index: 99;
+}
+.main-post .comment-form-container {
+  margin-top: 90px;
+}
+.main-post .comment-form-container h4 {
+  font-weight: 400;
+  font-size: 24px;
+}
+.main-post .comment-form-container form {
+  margin-top: 20px;
+  text-align: center;
+}
+.main-post .comment-form-container form .row {
+  margin-top: 30px;
+}
+.main-post .comment-form-container form p {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.main-post .comment-form-container form input {
+  padding: 10px 15px;
+  width: 100%;
+  border: 1px solid #d0d0d0;
+}
+.main-post .comment-form-container form textarea {
+  padding: 5px 15px;
+  resize: none;
+  width: 100%;
+  border: 1px solid #d0d0d0;
+}
+.main-post .comment-form-container form a {
+  color: #36363e;
 }

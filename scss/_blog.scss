@@ -17,6 +17,14 @@
 
       li {
         display: none;
+
+        a {
+          color: white;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
       }
     }
 
