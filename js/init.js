@@ -18,6 +18,11 @@ $(document).ready(function() {
   });
   $(".masonry").mouseleave(function() {
     $(this).children(".masonry-info").fadeTo('fast', 0);
+  });
+  $(".masonry").click(function() {
+    var url = $(this).attr("data-url");
+
+    window.location.href = "/" + url;
   })
 });
 
