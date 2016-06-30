@@ -15,10 +15,23 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
 @import url('https://fonts.googleapis.com/css?family=Crete+Round');
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   position: relative;
+  height: 100%;
+}
+
+.main-body {
+  height: 100%;
+}
+
+.container {
+  height: inherit;
 }
 
 h1, h2, h3, h4 {

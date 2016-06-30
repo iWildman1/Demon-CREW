@@ -1,6 +1,51 @@
 var mainInterval, lastId, mainMenu, mainMenuHeight, menuItems, scrollItems;
 
 $(document).ready(function() {
+
+    console.log("YAY");
+  	var timelineBlocks = $('.timeline-block'),
+  		offset = 0.8;
+
+  	//hide timeline blocks which are outside the viewport
+  	hideBlocks(timelineBlocks, offset);
+
+  	//on scolling, show/animate timeline blocks when enter the viewport
+  	$(window).on('scroll', function(){
+  		(!window.requestAnimationFrame)
+  			? setTimeout(function(){ showBlocks(timelineBlocks, offset); }, 100)
+  			: window.requestAnimationFrame(function(){ showBlocks(timelineBlocks, offset); });
+
+        var toTop = $(this).scrollTop() + mainMenuHeight;
+
+        var cur = scrollItems.map(function() {
+          if ($(this).offset().top < toTop) {
+            return this;
+          }
+        });
+
+        cur = cur[cur.length - 1];
+
+        var id = cur && cur.length ? cur[0].id : "";
+
+        if (lastId !== id) {
+          lastId = id;
+          menuItems.removeClass("active");
+          menuItems.filter("[href='#" + id + "']").addClass("active");
+        }
+  	});
+
+  	function hideBlocks(blocks, offset) {
+  		blocks.each(function(){
+  			( $(this).offset().top > $(window).scrollTop()+$(window).height()*offset ) && $(this).find('.timeline-connector, .timeline-content').addClass('is-hidden');
+  		});
+  	}
+
+  	function showBlocks(blocks, offset) {
+  		blocks.each(function(){
+  			( $(this).offset().top <= $(window).scrollTop()+$(window).height()*offset && $(this).find('.timeline-connector').hasClass('is-hidden') ) && $(this).find('.timeline-content').removeClass('is-hidden').addClass('bounce-in') && $(this).find('.timeline-connector').removeClass('is-hidden');
+  		});
+  	}
+
   console.log("ready");
   mainMenu = $(".left-navigation");
   mainMenuHeight = 15;
@@ -87,21 +132,5 @@ function startRotate(index) {
 }
 
 $(window).scroll(function() {
-  var toTop = $(this).scrollTop() + mainMenuHeight;
 
-  var cur = scrollItems.map(function() {
-    if ($(this).offset().top < toTop) {
-      return this;
-    }
-  });
-
-  cur = cur[cur.length - 1];
-
-  var id = cur && cur.length ? cur[0].id : "";
-
-  if (lastId !== id) {
-    lastId = id;
-    menuItems.removeClass("active");
-    menuItems.filter("[href='#" + id + "']").addClass("active");
-  }
 })
