@@ -1,0 +1,53 @@
+.single-container {
+  margin-top: 60px;
+
+  h1 {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 30px;
+  }
+
+  img {
+    margin-top: 15px;
+    width: 100%;
+  }
+
+  .single-event-info {
+    margin-top: 30px;
+
+    p {
+      font-size: 16px;
+    }
+
+    .single-event-box {
+      border: 1px solid #d0d0d0;
+      border-radius: 5px;
+      padding: 10px 10px;
+
+      ul {
+        display: inline-block;
+        list-style: none;
+        padding-left: 0;
+
+        li {
+          margin-bottom: 10px;
+          font-size: 15px;
+
+          i {
+            padding-right: 15px;
+            width: 25px;
+          }
+        }
+
+        &:last-child {
+          margin-left: 50px;
+        }
+
+        &.title-list {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

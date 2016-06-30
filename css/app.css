@@ -28,10 +28,6 @@ body {
   height: 100%;
 }
 
-.container {
-  height: inherit;
-}
-
 h1, h2, h3, h4 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -1050,4 +1046,48 @@ a.btn-primary:focus, a.btn-primary:focus:focus {
 }
 .events-container .timeline-block:hover .timeline-connector::before {
   border-color: #c52526;
+}
+
+.single-container {
+  margin-top: 60px;
+}
+.single-container h1 {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 30px;
+}
+.single-container img {
+  margin-top: 15px;
+  width: 100%;
+}
+.single-container .single-event-info {
+  margin-top: 30px;
+}
+.single-container .single-event-info p {
+  font-size: 16px;
+}
+.single-container .single-event-info .single-event-box {
+  border: 1px solid #d0d0d0;
+  border-radius: 5px;
+  padding: 10px 10px;
+}
+.single-container .single-event-info .single-event-box ul {
+  display: inline-block;
+  list-style: none;
+  padding-left: 0;
+}
+.single-container .single-event-info .single-event-box ul li {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+.single-container .single-event-info .single-event-box ul li i {
+  padding-right: 15px;
+  width: 25px;
+}
+.single-container .single-event-info .single-event-box ul:last-child {
+  margin-left: 50px;
+}
+.single-container .single-event-info .single-event-box ul.title-list {
+  font-weight: 500;
 }
