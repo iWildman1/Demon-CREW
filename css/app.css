@@ -56,6 +56,7 @@ h1, h2, h3, h4 {
 /* ========== POSITIONING ==========*/
 .main-body {
   margin-left: 260px;
+  position: relative;
 }
 
 .container {
@@ -94,6 +95,58 @@ a.btn-primary:focus, a.btn-primary:focus:focus {
   outline: none;
 }
 
+/* ========== HAMBURGER ==========*/
+.mobile-bar {
+  position: fixed;
+  display: none;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  border-bottom: 1px solid #d0d0d0;
+  z-index: 30;
+}
+
+.nav-hamburger {
+  position: relative;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  transition: 0.5s all ease-in-out;
+}
+.nav-hamburger.menu-active span {
+  display: table;
+  position: relative;
+  transition: 0.5s all ease-in-out;
+}
+.nav-hamburger.menu-active span:first-child {
+  display: table-cell;
+  position: absolute;
+  vertical-align: middle;
+  transform: rotate(45deg);
+}
+.nav-hamburger.menu-active span:last-child {
+  display: table-cell;
+  position: absolute;
+  vertical-align: middle;
+  transform: rotate(-45deg);
+}
+.nav-hamburger.menu-active span:nth-child(2) {
+  display: none;
+}
+.nav-hamburger span {
+  display: block;
+  width: 35px;
+  height: 4px;
+  margin-bottom: 5px;
+  background-color: #36363e;
+  border-radius: 4px;
+}
+.nav-hamburger span.nav-dark {
+  background-color: #36363e;
+}
+
 .left-navigation {
   background-color: white;
   border-right: #eeeeee 1px solid;
@@ -103,7 +156,7 @@ a.btn-primary:focus, a.btn-primary:focus:focus {
   top: 0;
   box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.3);
   text-align: center;
-  z-index: 9999;
+  z-index: 2;
 }
 .left-navigation img {
   margin-top: 40px;
@@ -1090,4 +1143,63 @@ a.btn-primary:focus, a.btn-primary:focus:focus {
 }
 .single-container .single-event-info .single-event-box ul.title-list {
   font-weight: 500;
+}
+
+/* === LAPTOPS === */
+@media screen and (max-width: 1200px) {
+  .left-navigation {
+    width: 200px;
+  }
+
+  .main-body {
+    margin-left: 200px;
+  }
+}
+/* === TABLETS === */
+@media screen and (max-width: 992px) {
+  .left-navigation {
+    display: none;
+    width: 100%;
+  }
+  .left-navigation img {
+    display: none;
+  }
+  .left-navigation .text-left {
+    text-align: center;
+    top: 50%;
+    margin-left: 0;
+    transform: translateY(-50%);
+  }
+  .left-navigation .text-left li {
+    padding: 0;
+    margin: 0;
+    padding: 20px 0;
+    position: relative;
+    font-size: 16px;
+  }
+  .left-navigation .text-left li::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .mobile-bar {
+    display: block;
+  }
+
+  .main-body {
+    margin-left: 0px;
+  }
+
+  .meet-the-team .col-sm-6 {
+    margin-bottom: 30px;
+  }
+  .meet-the-team .col-sm-6 img {
+    width: 70% !important;
+  }
 }

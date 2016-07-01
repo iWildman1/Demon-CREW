@@ -59,6 +59,7 @@ h1, h2, h3, h4 {
 
 .main-body {
   margin-left: 260px;
+  position: relative;
 }
 
 .container {
@@ -100,6 +101,65 @@ h1, h2, h3, h4 {
 
     &:focus {
       outline: none;
+    }
+  }
+}
+
+/* ========== HAMBURGER ==========*/
+
+.mobile-bar {
+  position: fixed;
+  display: none;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  border-bottom: 1px solid #d0d0d0;
+  z-index: 30;
+}
+
+.nav-hamburger {
+  position: relative;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  transition: 0.5s all ease-in-out;
+
+  &.menu-active {
+    span {
+      display: table;
+      position: relative;
+      transition: 0.5s all ease-in-out;
+
+      &:first-child {
+        display: table-cell;
+        position: absolute;
+        vertical-align: middle;
+        transform: rotate(45deg);
+      }
+      &:last-child {
+        display: table-cell;
+        position: absolute;
+        vertical-align: middle;
+        transform: rotate(-45deg);
+      }
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+
+  span {
+    display: block;
+    width: 35px;
+    height: 4px;
+    margin-bottom: 5px;
+    background-color: $darkMain;
+    border-radius: 4px;
+
+    &.nav-dark {
+      background-color: $darkMain;
     }
   }
 }

@@ -1,0 +1,69 @@
+/* === LAPTOPS === */
+
+@media screen and (max-width: 1200px) {
+  .left-navigation {
+    width: 200px;
+  }
+
+  .main-body {
+    margin-left: 200px;
+  }
+}
+
+/* === TABLETS === */
+
+@media screen and (max-width: 992px) {
+  .left-navigation {
+    display: none;
+    width: 100%;
+
+    img {
+      display: none;
+    }
+
+    .text-left {
+      text-align: center;
+      top: 50%;
+      margin-left: 0;
+      transform: translateY(-50%);
+
+      li {
+        padding: 0;
+        margin: 0;
+        padding: 20px 0;
+        position: relative;
+        font-size: 16px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 30px;
+          height: 1px;
+          background-color: rgba(0, 0, 0, 0.5);
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+
+  .mobile-bar {
+    display: block;
+  }
+  .main-body {
+    margin-left: 0px;
+
+
+  }
+
+  .meet-the-team {
+    .col-sm-6 {
+      margin-bottom: 30px;
+
+      img {
+        width: 70% !important;
+      }
+    }
+  }
+}
