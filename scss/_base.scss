@@ -107,6 +107,12 @@ h1, h2, h3, h4 {
 
 /* ========== HAMBURGER ==========*/
 
+.list-container {
+  .col-md-4 {
+    margin-top: 30px;
+  }
+}
+
 .mobile-bar {
   position: fixed;
   display: none;
